@@ -1,0 +1,253 @@
+*,::before, ::after{
+
+ margin :0;
+
+ padding :0;
+
+ box-sizing :border-box ;
+
+}
+
+body {
+
+    font-size: 15pt;
+
+    height: 100vh ;
+
+    background :#252525 ;
+
+    overflow: hidden ;
+
+    user-select: none ;
+
+    font-family: 'Sigmar', cursive;
+
+}
+
+.setting 
+
+{
+
+ position :fixed ;
+
+ top: 3%;
+
+ left: 3%;
+
+ width :45px ;
+
+ height: 45px;
+
+ background-color: rgba(183,185,190,.1);
+
+ display :grid;
+
+ place-items: center ;
+
+ border-radius :50%;
+
+ padding :5px ;
+
+ z-index :5;
+
+}
+
+.setting button 
+
+{
+
+ display: block ;
+
+ outline: none ;
+
+ background-color: transparent ;
+
+ border :none ;
+
+ color: rgba(183,185,190);
+
+}
+
+.menu 
+
+{
+
+ width: 70%;
+
+ left:50%;
+
+ top: 10%;
+
+ overflow: hidden ;
+
+ height: 0;
+
+ transform: translate(-50%);
+
+ position :fixed ;
+
+ background-color :rgba(3,3,3,.3);
+
+ display :flex ;
+
+ flex-direction :column ;
+
+ justify-content :center ;
+
+ align-items :center ;
+
+ border-radius :15px;
+
+ z-index: 10 ;
+
+ transition :height .2s ease-in-out ;
+
+}
+
+.menu.active
+
+{
+
+ height: 295px;
+
+ transition :height .2s ease-in-out ;
+
+ overflow: scroll ;
+
+}
+
+.menu label 
+
+{
+
+  text-align: center ;
+
+  width: 100%;
+
+  display :flex ;
+
+ flex-direction :column ;
+
+ justify-content :center ;
+
+ align-items :center ;
+
+ padding: 10px ;
+
+}
+
+.menu label h6
+
+{
+
+ color: rgba(183,185,190,.3);
+
+ 
+
+ padding :5px ;
+
+ 
+
+}
+
+.menu label input{
+
+ 
+
+ display: block ;
+
+ 
+
+ 
+
+}
+
+.menu  label input[type="color"]{
+
+ 
+
+ text-align: center ;
+
+}
+
+h1 {
+
+ position :fixed ;
+
+ top: 50%;
+
+ left :50%;
+
+ transform :translate(-50%,-50%);
+
+ font-size :3em;
+
+ color: rgba(183,185,190,.4);
+
+ opacity:.1;
+
+ text-align :center ;
+
+}
+
+.bubble{
+
+ width:35px;
+
+ height: 35px;
+
+ border-radius :50%;
+
+ border :1px solid rgba(183,185,190,.1);
+
+ position :absolute ;
+
+ animation: anim 10s  ease ;
+
+}
+
+@keyframes anim{
+
+ 
+
+  30%{
+
+   
+
+    transform: translateY(-400px);
+
+  }20%{
+
+   
+
+   transform: translateY(400px);
+
+  }
+
+  
+
+ 
+
+}
+
+.bubble::before {
+
+ 
+
+ content :"";
+
+ position :absolute ;
+
+ top: 0;
+
+ width: 15px;
+
+ height: 15px;
+
+ border-radius :50%;
+
+ background: rgba(183,185,190,.1);
+
+ top: 10%;
+
+}
